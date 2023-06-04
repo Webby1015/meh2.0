@@ -4,22 +4,22 @@ import os
 from Square_image import make_square
 
 #### cat image
-if not os.path.exists('Cat_image'):
-    os.makedirs('Cat_image')
+if not os.path.exists('images\Cat_image'):
+    os.makedirs('images\Cat_image')
 
 url = 'https://cataas.com/cat'
 filename = "cat.jpg"
 #           saving image
-urllib.request.urlretrieve(url, os.path.join('Cat_image', filename))
+urllib.request.urlretrieve(url, os.path.join('images\Cat_image', filename))
 #           Making Square
-image_path = 'Cat_image\cat.jpg'
+image_path = 'images\Cat_image\cat.jpg'
 square_image = make_square(image_path)
-square_image.save('Cat_image\cat.jpg')
+square_image.save('images\Cat_image\cat.jpg')
 
 
 #### dog image
-if not os.path.exists('Dog_image'):
-    os.makedirs('Dog_image')
+if not os.path.exists('images\Dog_image'):
+    os.makedirs('images\Dog_image')
     
 url = 'https://dog.ceo/api/breeds/image/random'
 
@@ -29,16 +29,16 @@ imge_object = response.json()
 url = imge_object['message']
 filename = "dog.jpg"
 #           saving image
-urllib.request.urlretrieve(url, os.path.join('Dog_image', filename))
+urllib.request.urlretrieve(url, os.path.join('images\Dog_image', filename))
 #           Making Square
-image_path = 'Dog_image\dog.jpg'
+image_path = 'images\Dog_image\dog.jpg'
 square_image = make_square(image_path)
-square_image.save('Dog_image\dog.jpg')
+square_image.save('images\Dog_image\dog.jpg')
 
 
 #### Anime images
-if not os.path.exists('Anime_girl_image'):
-    os.makedirs('Anime_girl_image')
+if not os.path.exists('images\Anime_girl_image'):
+    os.makedirs('images\Anime_girl_image')
 url = "https://random-anime-img.p.rapidapi.com/anime"
 
 headers = {
@@ -50,8 +50,8 @@ response = requests.get(url, headers=headers)
 url = response.json()['url']
 filename = "AnimeGirl.jpg"
 #           saving image
-urllib.request.urlretrieve(url, os.path.join('Anime_girl_image', filename))
+urllib.request.urlretrieve(url, os.path.join('images\Anime_girl_image', filename))
 #           Making Square
-image_path = 'Anime_girl_image\AnimeGirl.jpg'
+image_path = 'images\Anime_girl_image\AnimeGirl.jpg'
 square_image = make_square(image_path)
-square_image.save('Anime_girl_image\AnimeGirl.jpg')
+square_image.save('images\Anime_girl_image\AnimeGirl.jpg')

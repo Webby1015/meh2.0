@@ -18,7 +18,7 @@ def make_video(text):
     # calculate the text size and position
     text_color = (255, 255, 255)
     font = cv2.FONT_HERSHEY_COMPLEX_SMALL
-    font_scale = 0.75 * 1.2  # Increase font size by 20%
+    font_scale = 0.75 * 1.8
     thickness = 1
     text_size, _ = cv2.getTextSize(text, font, font_scale, thickness)
 
@@ -56,7 +56,7 @@ def make_video(text):
     bordered_bg = cv2.copyMakeBorder(bg, border_size, border_size, border_size, border_size, cv2.BORDER_CONSTANT, value=(255, 255, 255))
 
     # write video
-    out = cv2.VideoWriter('videos/output.mp4', cv2.VideoWriter_fourcc(*'mp4v'), 15, (bordered_bg.shape[1], bordered_bg.shape[0]))
+    out = cv2.VideoWriter('videos\output.mp4', cv2.VideoWriter_fourcc(*'mp4v'), 15, (bordered_bg.shape[1], bordered_bg.shape[0]))
     for _ in range(video_length * 15):  # Multiply video_length by 15 to determine the number of frames
         out.write(bordered_bg)
     out.release()
