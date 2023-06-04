@@ -35,8 +35,10 @@ image_path = 'Dog_image\dog.jpg'
 square_image = make_square(image_path)
 square_image.save('Dog_image\dog.jpg')
 
-#### Anime images
 
+#### Anime images
+if not os.path.exists('Anime_girl_image'):
+    os.makedirs('Anime_girl_image')
 url = "https://random-anime-img.p.rapidapi.com/anime"
 
 headers = {
@@ -45,6 +47,11 @@ headers = {
 }
 
 response = requests.get(url, headers=headers)
-
 url = response.json()['url']
-print(url)
+filename = "AnimeGirl.jpg"
+#           saving image
+urllib.request.urlretrieve(url, os.path.join('Anime_girl_image', filename))
+#           Making Square
+image_path = 'Anime_girl_image\AnimeGirl.jpg'
+square_image = make_square(image_path)
+square_image.save('Anime_girl_image\AnimeGirl.jpg')

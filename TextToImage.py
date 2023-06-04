@@ -22,4 +22,4 @@ def draw_text_on_image(text):
         d.text(((img.width - textwidth) / 2, (img.height - textheight) / 2), text, fill=(255,255,255), font=font)
 
     img.save("jokes/joke.jpg")
-draw_text_on_image("Hello World")
+
