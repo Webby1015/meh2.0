@@ -61,6 +61,6 @@ def make_video(text):
         out.write(bordered_bg)
     out.release()
 
-make_video("A week ago a friend invited a couple of other couples over for dinner. Eventually, the food (but not the wine) was cleared off the table for what turned out to be some fierce Scrabbling. Heeding the strategy of going for the shorter, more valuable word over the longer cheaper word")
+make_video("A apple week ago a friend invited a couple of other couples over for dinner. Eventually, the food (but not the wine) was cleared off the table for what turned out to be some fierce Scrabbling. Heeding the strategy of going for the shorter, more valuable word over the longer cheaper word")
 
 add_background_audio("videos\output.mp4", "audio\output.mp3", "videos\output.mp4")

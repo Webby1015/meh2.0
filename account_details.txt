@@ -1,0 +1,8 @@
+testinguploads1234567890@gmail.com
+testing_uploads1234567890
+testinguploads
+
+username = "testing_uploads1234567890"
+password = "testinguploads"
+image_path = "images\Anime_girl_image\AnimeGirl.jpg"  # Replace with the actual image path
+caption = "This is my awesome photo!"  # Replace with your desired caption # Replace with your desired caption
